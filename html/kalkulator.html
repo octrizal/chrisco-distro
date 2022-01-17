@@ -1,0 +1,59 @@
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Kalkulator</title>
+            <script type="text/Javascript">
+                function fAdd(){
+                    var a = document.forms["Kalkulator"]["fnilaiA"].value;
+                    var b = document.forms["Kalkulator"]["fnilaiB"].value;
+                    var c = Number(a) + Number(b);
+                    document.getElementById("hasil").innerHTML=c;
+                }
+                function fAjar(){
+                    var a = document.forms["Kalkulator"]["fnilaiA"].value;
+                    var b = document.forms["Kalkulator"]["fnilaiB"].value;
+                    var c = Number(a) - Number(b);
+                    document.getElementById("hasil").innerHTML=c;
+                }
+                function fAdhil(){
+                    var a = document.forms["Kalkulator"]["fnilaiA"].value;
+                    var b = document.forms["Kalkulator"]["fnilaiB"].value;
+                    var c = Number(a) * Number(b);
+                    document.getElementById("hasil").innerHTML=c;
+                }
+                function fAfa(){
+                    var a = document.forms["Kalkulator"]["fnilaiA"].value;
+                    var b = document.forms["Kalkulator"]["fnilaiB"].value;
+                    var c = Number(a) / Number(b);
+                    document.getElementById("hasil").innerHTML=c;
+                }
+            </script>
+            <style>
+                
+            </style>
+        </head>
+        <body>
+            <div style="background-color: burlywood;">
+                <form name="Kalkulator">
+                    <div>
+                        <label for="nilaiA">Nilai 1:</label>
+                        <input type="number" id="nilaiA" name="fnilaiA">
+                    </div>
+                    <div>
+                        <label for="nilaiB">Nilai 1:</label>
+                        <input type="number" id="nilaiB" name="fnilaiB">
+                    </div>
+                    <div>
+                        <input type="button" value="+" onclick="fAdd()">
+                        <input type="button" value="-" onclick="fAjar()">
+                        <input type="button" value="*" onclick="fAdhil()">
+                        <input type="button" value="/" onclick="fAfa()">
+                    </div>     
+                </form>
+            </div>
+            <div style="background-color: chocolate;">
+                <div>Hasil</div>
+                <div id="hasil"></div>
+            </div>
+        </body>
+    </html>
